@@ -30,12 +30,10 @@ test("One dollar should be 146.26168224299064 yens", function() {
     // Importo la funcion desde app.js
     const { fromDollarToYen } = require('./app.js');
 
-    // Uso la función como debe ser usada
     const yens = fromDollarToYen(1);
 
     const expected = 1 * 146.26168224299064;
 
-    // Hago mi comparación (la prueba)
     expect(fromDollarToYen(1)).toBe(146.26168224299064);
 })
 
@@ -43,12 +41,9 @@ test("One yen should be 0.005948242811501598 pounds", function() {
     // Importo la funcion desde app.js
     const { fromYenToPound } = require('./app.js');
 
-    // Uso la función como debe ser usada
     const yens = fromYenToPound(1);
 
-    // Si 1 euro son 1.07 dólares, entonces 3.5 euros debe ser (3.5 * 1.07)
     const expected = 1 * 0.005948242811501598;
 
-    // Hago mi comparación (la prueba)
     expect(fromYenToPound(1)).toBe(0.005948242811501598);
 })
